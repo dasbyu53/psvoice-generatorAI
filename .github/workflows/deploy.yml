@@ -30,7 +30,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build (with repo subpath base)
-        run: bun run build -- --base=/${{ github.event.repository.name }}/
+        run: bun run build -- --base=/
         env:
           # Convex deployment URL — set this as a repository secret named
           # VITE_CONVEX_URL (Settings → Secrets and variables → Actions).
